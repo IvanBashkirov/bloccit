@@ -21,6 +21,7 @@ gem 'coffee-rails', '~> 4.2'
 
 gem 'pry-rails'
 
+
 gem 'bootstrap-sass'
 
 gem 'bootstrap-social-rails'
@@ -41,6 +42,7 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
+  gem 'shoulda'
   gem 'rails-controller-testing'
 end
 
