@@ -23,7 +23,7 @@ RSpec.describe User, type: :model do
   describe 'user name' do
     it 'should capitalize every word of the name' do
       new_user = User.create!(name: 'rob jonson', email: 'rob@bloccit.com', password: '123456')
-      new_user2 = User.create!(name: 'rob jonson', email: 'rob2@bloccit.com', password: '123456')
+      new_user2 = User.create!(name: 'rob Jonson', email: 'rob2@bloccit.com', password: '123456')
       expect(new_user).to have_attributes(name: 'Rob Jonson', email: 'rob@bloccit.com', password: '123456')
       expect(new_user2).to have_attributes(name: 'Rob Jonson', email: 'rob2@bloccit.com', password: '123456')
     end
