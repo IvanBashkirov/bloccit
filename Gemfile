@@ -24,6 +24,9 @@ gem 'pry-rails'
 
 gem 'bootstrap-sass'
 
+# Used for encrypting User passwords
+gem 'bcrypt'
+
 gem 'bootstrap-social-rails'
 gem 'font-awesome-rails'
 # Use jquery as the JavaScript library
