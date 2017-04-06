@@ -2,6 +2,7 @@ class User < ApplicationRecord
   include UsersHelper
 
   has_many :posts
+  has_many :comments
 
   before_save lambda { self.email = email.downcase if email.present? },
               lambda { self.name = capitalize_name(name) if name.present? },
