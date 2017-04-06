@@ -1,8 +1,8 @@
 class User < ApplicationRecord
   include UsersHelper
 
-  has_many :posts
-  has_many :comments
+  has_many :posts, :dependent => :destroy
+  has_many :comments, :dependent => :destroy
 
   before_save lambda { self.email = email.downcase if email.present? },
               lambda { self.name = capitalize_name(name) if name.present? },
