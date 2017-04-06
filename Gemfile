@@ -42,20 +42,19 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'pg'
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0'
   gem 'shoulda'
   gem 'rails-controller-testing'
 end
 
 group :production do
-  gem 'pg'
 end
 
 group :development do
-  gem 'sqlite3'
   gem 'listen'
+  gem 'rspec-rails', '~> 3.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
