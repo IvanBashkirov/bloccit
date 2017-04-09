@@ -3,6 +3,7 @@ class User < ApplicationRecord
 
   has_many :posts, :dependent => :destroy
   has_many :comments, :dependent => :destroy
+  has_many :votes, :dependent => :destroy
 
   before_save lambda { self.email = email.downcase if email.present? },
               lambda { self.name = capitalize_name(name) if name.present? },
