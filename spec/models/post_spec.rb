@@ -28,6 +28,14 @@ RSpec.describe Post, type: :model do
     end
   end
 
+  describe 'after post is created' do
+    it 'should receive an upvote from the creator' do
+      my_post = topic.posts.create!(title: title, body: body, user: user)
+      expect(my_post.up_votes).to eq(1)
+      expect(my_post.points).to eq(1)
+    end
+  end
+
   describe 'voting' do
     before do
       3.times { post.votes.create!(value: 1, user: user) }
