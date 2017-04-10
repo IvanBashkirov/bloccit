@@ -18,6 +18,9 @@ gem 'coffee-rails', '~> 4.2'
 
 # Use figaro for secure storage of sensitive data
 gem 'figaro', '1.0'
+# Use factory_girl to build objects
+gem 'factory_girl_rails', '~> 4.0'
+
 
 # Use Pry as default console
 gem 'pry-rails'
