@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  include UsersHelper
 
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
@@ -19,6 +18,12 @@ class User < ApplicationRecord
             length: { minimum: 3, maximum: 254 }
 
   has_secure_password
+
+  def capitalize_name(name)
+    names = name.split(' ')
+    names.each {|n| n[0] = n[0].upcase}
+    names.join(' ')
+  end
 
   def favorite_for(post)
     favorites.where(post_id: post.id).first

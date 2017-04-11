@@ -8,7 +8,8 @@
       submitted
       <%= time_ago_in_words(post.created_at) %>
       ago by
-      <%= post.user.name %>
+      <%= post.user.name %> &nbsp
+      <%= image_tag post.user.avatar_url(24), class: "gravatar" %>
       <br>
       <%= post.comments.count %>
       Comments

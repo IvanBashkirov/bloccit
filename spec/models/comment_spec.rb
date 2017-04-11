@@ -2,11 +2,11 @@ require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
   let(:other_user) { User.create!(name: 'Bloccit Other User', email: 'otheruser@bloccit.com', password: 'byeworld') }
-  let(:other_post) { topic.posts.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph, user: other_user) }
-  let(:comment) { Comment.create!(body: 'Comment Body', post: post, user: user) }
+  let(:other_post) { create(:post, user: other_user) }
   let(:topic) { create(:topic) }
   let(:user) { create(:user) }
   let(:post) { create(:post) }
+  let(:comment) {create(:comment) }
 
 
   it { is_expected.to belong_to(:post) }
@@ -16,7 +16,7 @@ RSpec.describe Comment, type: :model do
 
   describe 'attributes' do
     it 'has a body attribute' do
-      expect(comment).to have_attributes(body: 'Comment Body')
+      expect(comment).to have_attributes(body: comment.body)
     end
   end
 
