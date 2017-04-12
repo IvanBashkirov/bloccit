@@ -17,15 +17,15 @@
         <li><%= link_to "Topics", topics_path %></li>
         <li><%= link_to "About", about_path %></li>
 
-        <div class="pull-right user-info">
+        <div class="pull-right">
           <% if current_user %>
-          <%= image_tag current_user.avatar_url(48), class: "gravatar" %>
-          <div class="pull-right">
-            <%= link_to current_user.name, user_path(current_user) %>
-            <br/>
+          <%= image_tag current_user.avatar_url(64), class: "gravatar" %>
+          <div class="pull-right user-info">
+            <%= link_to current_user.name, user_path(current_user) %> |
             <%= link_to "Sign Out", session_path(current_user), method: :delete %>
           </div>
         <% else %>
+        <div class="user-info">
           <%= link_to "Sign In", new_session_path %>
           or
           <%= link_to "Sign Up", new_user_path %>
