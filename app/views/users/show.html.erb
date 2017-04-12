@@ -33,7 +33,7 @@
 <p><%=@user.name%> has not submitted any comments yet </p>
 <%end%>
 
-<%if @user.favorites.count != 0 %>
+<%if @user.favorite_posts.count != 0 %>
 <h2> Favorites </h2>
-<%= render @user.favorites.map {|f| f.post} %>
+<%= render @user.favorite_posts %>
 <%end%>
