@@ -51,7 +51,6 @@ gem 'pg'
 group :development, :test do
   gem 'shoulda'
   gem 'rails-controller-testing'
-  gem 'rspec-rails', '~> 3.0'
 end
 
 group :production do
@@ -59,6 +58,7 @@ end
 
 group :development do
   gem 'listen'
+  gem 'rspec-rails', '~> 3.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
