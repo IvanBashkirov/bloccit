@@ -1,3 +1,3 @@
 # README
 
-## Bloccit: A Reddit replica made to learn web development
+## Siplit: A Reddit replica made to learn web development
